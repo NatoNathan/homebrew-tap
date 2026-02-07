@@ -1,20 +1,20 @@
 class Shipyard < Formula
   desc "CLI tool for managing project workflows with a nautical theme"
   homepage "https://github.com/NatoNathan/shipyard"
-  version "0.0.0-snapshot.20260204152216"
+  version "0.4.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.0.0-snapshot.20260204152216/shipyard_v0.0.0-snapshot.20260204152216_darwin_amd64.tar.gz"
-    sha256 "77d189c07377d1c5ae987adc568e66be335b4bf4caca8cad9e6163ba3f7186f1"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.4.0/shipyard_v0.4.0_darwin_amd64.tar.gz"
+    sha256 "9b2de4fcc53b480b48452a3fa08e3d59a7cd0745ddf5634145d9a3f9512a967f"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.0.0-snapshot.20260204152216/shipyard_v0.0.0-snapshot.20260204152216_darwin_arm64.tar.gz"
-    sha256 "e636c7515f3766fad99fe3c1680a4e6e75cb8363106c1b6e87cc72ac8f6212ae"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.4.0/shipyard_v0.4.0_darwin_arm64.tar.gz"
+    sha256 "5f002ba8e5b92622ce96e41efc38256e56d448c631aee36ef36841fb7fc75860"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.0.0-snapshot.20260204152216/shipyard_v0.0.0-snapshot.20260204152216_linux_amd64.tar.gz"
-    sha256 "85d4b114005084e8bd1b1a031865df42069e4d11946c353eee05e9474b186fa6"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.4.0/shipyard_v0.4.0_linux_amd64.tar.gz"
+    sha256 "6c3d1d2f998f42cb27534877796ffaf4973d7913865433fe81b6b203fc0d7070"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.0.0-snapshot.20260204152216/shipyard_v0.0.0-snapshot.20260204152216_linux_arm64.tar.gz"
-    sha256 "5d5963006dcf6d0f2e24c0980c1502aa070fc515ff376ce52e0a0de5f93fdb0b"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.4.0/shipyard_v0.4.0_linux_arm64.tar.gz"
+    sha256 "d000fc84f5db0d8cc81b370666c6421a1141e61b921497de891c3e77bd79b07a"
   end
 
   def install
@@ -23,6 +23,6 @@ class Shipyard < Formula
   end
 
   test do
-    assert_match "shipyard version 0.0.0-snapshot.20260204152216", shell_output("#{bin}/shipyard version")
+    assert_match "shipyard version 0.4.0", shell_output("#{bin}/shipyard version")
   end
 end
