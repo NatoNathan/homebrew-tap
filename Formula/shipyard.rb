@@ -1,20 +1,20 @@
 class Shipyard < Formula
   desc "CLI tool for managing project workflows with a nautical theme"
   homepage "https://github.com/NatoNathan/shipyard"
-  version "0.5.0"
+  version "0.6.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.5.0/shipyard_v0.5.0_darwin_amd64.tar.gz"
-    sha256 "64338aee252cb0dadb2fd02aa6f8dd4ee99b57886a4950b3b33da8c0d3f622e5"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.6.0/shipyard_v0.6.0_darwin_amd64.tar.gz"
+    sha256 "9e4eb5d169ef593d6e98753ec700d54bba576331a6c2f5978aec686b74770ccc"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.5.0/shipyard_v0.5.0_darwin_arm64.tar.gz"
-    sha256 "0d4c7cc6322f9f418d1bfaab34cd26e66139546c0cbf528f219e17269768fa26"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.6.0/shipyard_v0.6.0_darwin_arm64.tar.gz"
+    sha256 "72fc322e3845dd578ec4033054b78b387b64a93d0c7d3c9a00a3b246e5f569e7"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.5.0/shipyard_v0.5.0_linux_amd64.tar.gz"
-    sha256 "7718448dd071e6809fa437dbb163c758de39da278b1c92b0c33ec93b93ef58be"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.6.0/shipyard_v0.6.0_linux_amd64.tar.gz"
+    sha256 "bb2a6607420e4fc4343d22d44293bda4746722528e19e7239e52aad070a7e9d6"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/NatoNathan/shipyard/releases/download/v0.5.0/shipyard_v0.5.0_linux_arm64.tar.gz"
-    sha256 "a8b197505f29d09e396b46638ef5f34be1f2604978b55a319be9361c2080229e"
+    url "https://github.com/NatoNathan/shipyard/releases/download/v0.6.0/shipyard_v0.6.0_linux_arm64.tar.gz"
+    sha256 "bc368d7553c93bcac4d76ada3b3c771d0fb70e810c44ffcf71d2319c1f2ee360"
   end
 
   def install
@@ -23,6 +23,6 @@ class Shipyard < Formula
   end
 
   test do
-    assert_match "shipyard version 0.5.0", shell_output("#{bin}/shipyard version")
+    assert_match "shipyard version 0.6.0", shell_output("#{bin}/shipyard version")
   end
 end
